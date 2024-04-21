@@ -1,0 +1,400 @@
+:root{
+--main-color:#007aff;
+--new-color:#ee626b;
+}
+body{
+height: fit-content;
+width: 100%
+}
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+border: none;
+outline: none;
+list-style: none;
+text-decoration: none;
+font-family: arial
+}
+
+.container{
+padding-left: 15px;
+padding-right: 15px;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media (min-width: 768px){
+.container{
+width: 750px
+}
+}
+
+@media (min-width: 992px){
+.container{
+width: 970px
+}
+}
+
+@media (min-width: 1200px){
+.container{
+width: 1170px
+}
+}
+
+header{
+background: url(../images/banner-bg.jpg);
+padding: 20px;
+position: relative;
+height: 82px;
+transform: 0.5s;
+
+
+}
+
+header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo{
+
+}
+
+ul li{
+	display: inline-block;
+	padding-left: 30px
+}
+ul li a{
+color: #fff;
+font-size: 18px;
+background: transparent;
+padding: 10px;
+border-radius: 40px;
+transition: 0.5s
+}
+header .active , ul li a:hover{
+	background: #ffffff44
+}
+.toggle{
+	display: none;
+}
+
+.btn{
+padding: 10px;
+border-radius: 20px;
+cursor: pointer;
+background: var(--new-color);
+color: #fff;
+font-weight: 600
+}
+
+@media (max-width: 992px){
+ul li{
+	padding-left: 0px
+}
+}
+
+@media (max-width: 767px){
+.menu{
+	opacity: 0;
+z-index: 1087;
+	top: -120px;
+	position: absolute;
+left:50%;
+height: auto;
+	transform: translate(-50%);
+	width: 100%
+}
+.menu li{
+display: block;
+width: 100%;
+}
+.toggle{
+	display: block;
+	color: #fff;
+	cursor: pointer;
+	font-size: 50px
+}
+.hero{
+background: #fff;
+left: 50%;
+top: 85px;
+max-width: 100%;
+border-radius: 0 0 30px 30px;
+text-align: center;
+margin-left: auto;
+margin: auto;
+transform: translate(-50%);
+left: 50%;
+z-index: -1;
+transition: 0.5s;
+height: auto;
+opacity: 1;
+z-index: 100
+}
+
+.hero li{
+	display: block;
+	width: 100%;
+	padding: 20px;
+
+}
+.hero li:not(:last-child){
+border-bottom: 1px solid #ddd
+}
+.hero li a , header .active, header .btn{
+padding: 0;
+	color: #000;
+background: none !important,
+} 
+header .btn{
+	background: none
+}
+.hero li a:hover , .activ , header .btn:hover{
+	transition: 0.5s;
+color: var(--new-color);
+padding: 0;
+background: none
+}
+}
+
+
+.activets{
+padding-top: 80px;
+padding-bottom: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: url(../images/banner-bg.jpg);
+text-align: center;
+color: #fff;
+border-radius: 0 0 130px 130px
+}
+
+.activets h1{
+	margin-bottom: 70px;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: 800
+}
+
+.activets a{
+	color: #fff
+}
+
+
+
+.activets span{
+font-size: 20px
+}
+
+
+.treanding{
+	padding-bottom:60px
+}
+
+.heading{
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+align-items: center;
+}
+ .heading h6{
+color: var(--new-color);
+font-size: 17px;
+margin-bottom: 20px
+}
+
+
+ .heading h2{
+font-size: 30px;
+font-weight: 800
+}
+
+ .heading .btn{
+width: 100px;
+padding: 15px 20px;
+color: 
+#fff;
+}
+
+
+.treanding .cards{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+gap:20px;
+}
+.cards .card{
+	position: relative;
+
+}
+.treanding .cards .card .image{
+	width: 100%
+}
+.treanding .cards .card img{
+	width: 100%;
+}
+
+.treanding .cards .card .price{
+position: absolute;
+z-index: 87;
+width: 70px;
+height: 50px;
+border-radius: 10px;
+background: var(--main-color);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap:5px;
+color: #fff;
+top: 10px;
+right: 10px
+}
+.treanding .cards .card .price small{
+    text-decoration: line-through;
+}
+
+.treanding .cards .card{
+padding-bottom: 20px;
+background: #dddddd99;
+border-radius: 20px;
+overflow: hidden;
+position: relative;
+}
+
+.treanding .cards .card .info{
+padding: 20px;
+position: relative;
+
+}
+
+ .type{
+font-size: 16px	;
+font-weight: bold;
+color: #777;
+}
+
+.treanding .cards .card .info h6{
+font-size: 20px;
+margin: 5px 00 0 0 ;
+color: #444;
+transition: 0.5s
+}
+
+.treanding .cards .card .info .shoping{
+width: 50px;
+height: 50px;
+background: var(--new-color);
+border-radius: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+font-size: 20px;
+right: 10px;
+position: absolute;
+top: 30px;
+transition: 0.5s;
+cursor: pointer;
+}
+
+.treanding .btn:hover , .treanding .card:hover .info .shoping {
+	background: var(--main-color)
+}
+
+.treanding .card:hover .info h6{
+color: var(--main-color)
+}
+
+
+.filters{
+text-align: center;
+padding-top: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.filters .container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.filters .container  button.active{
+background: var(--new-color);
+padding: 10px;
+font-size: 18px;
+font-weight: bolder;
+cursor: pointer;
+border-radius: 25px;
+color: #fff
+}
+
+
+.filters .container  button{
+background: #eee;
+padding: 10px;
+font-size: 18px;
+font-weight: bolder;
+cursor: pointer;
+border-radius: 25px;
+user-select: none;
+
+}
+
+.bulits{
+margin: 50px auto;
+}
+
+.bulits ul{
+text-align: center;
+}
+
+
+.bulits li{
+width: 50px;
+height: 50px;
+background: #f7f7f7;
+font-size: 35px;
+border-radius: 50%;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+.bulits li a{
+font-size:20px;
+color: #000;
+position: absolute;
+left: 10px;
+font-weight: bolder;
+}
+
+
+.bulits li:hover , ul li:hover a{
+background: var(--main-color);
+color: #fff
+}
+html{
+scroll-behavior: smooth;
+}
+
+footer{
+width: 100%;
+height: 100px;
+background: url(../images/banner-bg.jpg);
+font-size: 20px;
+color: #fff;
+border-radius: 50px 50px 0 0;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+

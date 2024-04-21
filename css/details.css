@@ -1,0 +1,468 @@
+:root{
+--main-color:#007aff;
+--new-color:#ee626b;
+}
+body{
+height: fit-content;
+width: 100%
+}
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+border: none;
+outline: none;
+list-style: none;
+text-decoration: none;
+font-family: arial
+}
+
+.container{
+padding-left: 15px;
+padding-right: 15px;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media (min-width: 768px){
+.container{
+width: 750px
+}
+}
+
+@media (min-width: 992px){
+.container{
+width: 970px
+}
+}
+
+@media (min-width: 1200px){
+.container{
+width: 1170px
+}
+}
+
+header{
+background: url(../images/banner-bg.jpg);
+padding: 20px;
+position: relative;
+height: 82px;
+transform: 0.5s;
+
+
+}
+
+header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo{
+
+}
+
+ul li{
+	display: inline-block;
+	padding-left: 30px
+}
+ul li a{
+color: #fff;
+font-size: 18px;
+background: transparent;
+padding: 10px;
+border-radius: 40px;
+transition: 0.5s
+}
+.active , ul li a:hover{
+	background: #ffffff44
+}
+.toggle{
+	display: none;
+}
+
+.btn{
+padding: 10px;
+border-radius: 20px;
+cursor: pointer;
+background: var(--new-color);
+color: #fff;
+font-weight: 600
+}
+
+@media (max-width: 992px){
+ul li{
+	padding-left: 0px
+}
+}
+
+@media (max-width: 767px){
+.menu{
+	opacity: 0;
+z-index: 1087;
+	top: -120px;
+	position: absolute;
+left:50%;
+height: auto;
+	transform: translate(-50%);
+	width: 100%
+}
+.menu li{
+display: block;
+width: 100%;
+}
+.toggle{
+	display: block;
+	color: #fff;
+	cursor: pointer;
+	font-size: 50px
+}
+.hero{
+background: #fff;
+left: 50%;
+top: 85px;
+max-width: 100%;
+border-radius: 0 0 30px 30px;
+text-align: center;
+margin-left: auto;
+margin: auto;
+transform: translate(-50%);
+left: 50%;
+z-index: -1;
+transition: 0.5s;
+height: auto;
+opacity: 1;
+z-index: 100
+}
+
+.hero li{
+	display: block;
+	width: 100%;
+	padding: 20px;
+
+}
+.hero li:not(:last-child){
+border-bottom: 1px solid #ddd
+}
+.hero li a , .active, header .btn{
+padding: 0;
+	color: #000;
+background: none !important,
+} 
+header .btn{
+	background: none
+}
+.hero li a:hover , .activ , header .btn:hover{
+	transition: 0.5s;
+color: var(--new-color);
+padding: 0;
+background: none
+}
+}
+
+
+.activets{
+padding-top: 80px;
+padding-bottom: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: url(../images/banner-bg.jpg);
+text-align: center;
+color: #fff;
+border-radius: 0 0 130px 130px
+}
+
+.activets h1{
+	margin-bottom: 70px;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: 800
+}
+
+@media (max-width: 500px){
+.activets h1{
+font-size: 20px
+}
+}
+.activets a{
+	color: #fff
+}
+
+
+
+.activets span{
+font-size: 20px
+}
+
+
+.treanding{
+	padding-bottom:60px
+}
+
+.heading{
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+align-items: center;
+}
+ .heading h6{
+color: var(--new-color);
+font-size: 17px;
+margin-bottom: 20px
+}
+
+
+ .heading h2{
+font-size: 30px;
+font-weight: 800
+}
+
+ .heading .btn{
+width: 100px;
+padding: 15px 20px;
+color: 
+#fff;
+}
+
+.game {
+position: relative;
+padding-bottom: 60px;
+padding-top: 60px;
+border-bottom: 1px solid #ccc;
+
+}
+
+.game .container{
+display: flex;
+justify-content: space-between;
+}
+
+.game .container .image{
+position: relative;
+overflow: hidden;
+width: 100%;
+max-width: 100%;
+
+}
+
+
+.game .container .image img{
+overflow: hidden;
+width: 100%
+}
+
+.game .container .text{
+width: 100%;
+max-width: 100%;
+padding:30px;
+text-align: center;
+}
+
+.game .container .text h2{
+font-size: 30px;
+margin-bottom: 20px;
+font-weight: bolder;
+
+}
+
+.game .container .text .price{
+font-size: 30px;
+margin-bottom: 30px;
+display: block;
+color: var(--main-color);
+font-weight: 800;
+}
+
+
+.game .container .text .price small{
+text-decoration: line-through;
+color: #ccc;
+}
+
+.game .container .text p{
+line-height: 1.8;
+margin-bottom: 30px;
+font-size: 16px;
+color: #777
+}
+
+
+.game .container .text .add{
+width: 100%;
+text-align: center;
+margin-bottom: 30px;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+width: 100%;
+margin: auto;
+text-align: center;
+justify-content: center;
+}
+
+.game .container .text .add input{
+width: 150px;
+border-radius: 50px;
+background: #eee;
+height: 90px;
+padding: 10px;
+text-align: center;
+font-size: 19px;
+margin-bottom: 20px
+}
+
+
+.game .container .text .add  .btn{
+width: 100%;
+padding: 20px;
+border-radius: 30px;
+margin: auto;
+text-align: center;
+margin-bottom: 30px
+}
+
+
+.game .container .links{
+	mask-type: 50px;
+display: block;
+text-align: center;
+}
+
+
+.game .container .links h4{
+display: flex;
+justify-content: space-between;
+gap:30px;
+margin-bottom: 20px;
+font-size: 20px;
+max-width: 100%;
+width: 400px;
+font-weight: bold;
+}
+
+.game .container .links h4 a{
+color: var(--main-color)
+}
+
+@media (max-width: 767px){
+.game .container{
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+.game .container .image {
+text-align: center;
+padding: 0;
+margin-bottom: 20px
+}
+
+.game .container .text{
+max-width: 100%
+}
+}
+
+
+.text-swaping{
+padding-top:60px;
+padding-bottom: 60px;
+margin-top: 60px;
+margin-bottom: 60px;
+width: 100%;
+max-width: 100%;
+background: #f7f7f7;
+border-radius: 90px
+}
+
+
+#swapper1 , #swapper2 , #swapper{
+margin-bottom: 40px;
+line-height: 1.7;
+color: #777;
+margin-top: 40px;
+text-align: center;
+}
+
+
+.text-swaping .titles{
+padding: 10px
+}
+.text-swaping .titles button{
+padding: 10px;
+background: 0;
+font-size: 22px;
+cursor: pointer;
+}
+
+
+.text-swaping .titles .active{
+	transition: 0.5s;
+color: var(--main-color);
+}
+
+
+.categories{
+padding-top: 100px;
+padding-bottom: 100px;
+position: relative;
+}
+
+
+
+
+.categories .heading h6{
+font-size: 18px;
+margin-bottom: 30px;
+color: var(--new-color)
+}
+
+
+.categories .heading h2{
+font-size: 35px;
+font-weight: bold;
+}
+
+
+
+.categories .content{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+gap:30px;
+margin-top: 60px
+}
+
+
+.categories .content .box{
+background: var(--main-color);
+border-radius: 35px ;
+text-align: center;
+padding: 20px 0 0 0;
+overflow: hidden;
+}
+
+.categories .content .box h4{
+color: #fff;
+margin-bottom: 20px;
+font-size: 20px;
+}
+
+
+.categories .content .box img{
+max-width: 100%;
+width: 100%;
+scale:1.1;
+}
+
+
+footer{
+width: 100%;
+height: 100px;
+background: url(../images/banner-bg.jpg);
+font-size: 20px;
+color: #fff;
+border-radius: 50px 50px 0 0;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
